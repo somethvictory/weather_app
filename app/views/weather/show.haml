@@ -1,1 +1,32 @@
-%h1 Welcome to Weather App!!!
+.row
+  .col-xs-12
+    %h1 Weather Forecast
+  .col-xs-6
+    = form_tag({controller: 'weather', action: 'show'}, method: 'get', class: 'form-inline') do
+      .form-group
+        = label_tag      :city
+        = text_field_tag :city,    params[:city], class: 'form-control'
+      .form-group
+        = label_tag      :country
+        = text_field_tag :country, params[:country], class: 'form-control'
+        = submit_tag 'Submit', class: 'btn btn-primary'
+
+  .col-xs-6
+    .detail
+      %span Weather information of
+      %strong= [@weather.city, @weather.country.presence].compact.join(', ')
+    .table-responsive
+      %table.table
+        %thead
+          %th Weather
+          %th Temperature
+          %th Humidnity
+          %th Pressure
+          %th Wind Speed
+        %tbody
+          %tr
+            %td= @weather.weathers.join(', ')
+            %td= @weather.temp
+            %td= @weather.humidity
+            %td= @weather.pressure
+            %td= @weather.wind_speed

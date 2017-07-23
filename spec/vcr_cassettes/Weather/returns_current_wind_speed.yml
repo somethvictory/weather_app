@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?APPID=ee08ab5aab74bf1af14e196dd60d0c0d&q=,Phnom%20Penh,Cambodia
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Sun, 23 Jul 2017 06:01:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '465'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?APPID=ee08ab5aab74bf1af14e196dd60d0c0d&q=%2cphnom+penh%2ccambodia"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb29yZCI6eyJsb24iOjEwNC44NywibGF0IjoxMS41NX0sIndlYXRoZXIi
+        Olt7ImlkIjo4MDIsIm1haW4iOiJDbG91ZHMiLCJkZXNjcmlwdGlvbiI6InNj
+        YXR0ZXJlZCBjbG91ZHMiLCJpY29uIjoiMDNkIn1dLCJiYXNlIjoic3RhdGlv
+        bnMiLCJtYWluIjp7InRlbXAiOjMwNi4xNSwicHJlc3N1cmUiOjEwMDcsImh1
+        bWlkaXR5Ijo2MywidGVtcF9taW4iOjMwNi4xNSwidGVtcF9tYXgiOjMwNi4x
+        NX0sInZpc2liaWxpdHkiOjEwMDAwLCJ3aW5kIjp7InNwZWVkIjozLjYsImRl
+        ZyI6MjcwfSwiY2xvdWRzIjp7ImFsbCI6NDB9LCJkdCI6MTUwMDc4NjAwMCwi
+        c3lzIjp7InR5cGUiOjEsImlkIjo3ODcyLCJtZXNzYWdlIjowLjAyMzIsImNv
+        dW50cnkiOiJLSCIsInN1bnJpc2UiOjE1MDA3NjM1NzcsInN1bnNldCI6MTUw
+        MDgwOTI1OX0sImlkIjoxODMwMTAzLCJuYW1lIjoiS3LFj25nIFBobnVtIFDD
+        qW5oIiwiY29kIjoyMDB9
+    http_version: 
+  recorded_at: Sun, 23 Jul 2017 06:01:46 GMT
+recorded_with: VCR 3.0.3
