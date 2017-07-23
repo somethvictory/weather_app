@@ -1,24 +1,45 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a sample Rails app to display weather information from http://openweathermap.org/API based on City and Country.
 
-Things you may want to cover:
 
-* Ruby version
+### Requirments
 
-* System dependencies
+* Ruby > 2.3.x
 
-* Configuration
+* Rails > 5.1.x
 
-* Database creation
 
-* Database initialization
+### Setup
 
-* How to run the test suite
+```
+git clone git@github.com:somethvictory/weather_app.git
+cd weather_app
+bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Create a `.env` file and copy app id from `.env.example`
 
-* Deployment instructions
+### Startup server
 
-* ...
+```
+rails server
+```
+
+### Spec
+
+To run all specs in the project:
+
+```
+rake
+```
+or
+
+```
+rspec
+```
+
+### Improvements
+
+1. Cache the fetched weather data.
+2. Handle the display message when city could not be found.
